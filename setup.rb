@@ -3,6 +3,7 @@ require 'active_record'
 require_relative 'lib/store'
 require_relative 'lib/employee'
 require 'pg'
+require 'securerandom'
 
 # Output messages from Active Record to standard out
 ActiveRecord::Base.logger = Logger.new(STDOUT)
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define do
     table.column :first_name, :string
     table.column :last_name, :string
     table.column :hourly_rate, :integer
+    table.column :password, :string
     table.timestamps null: false
   end
 end

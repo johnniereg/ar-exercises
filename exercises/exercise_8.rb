@@ -13,3 +13,5 @@ puts "----------"
 new_employee = @store2.employees.create(first_name: "Tomas", last_name: "Vanek", hourly_rate: 45)
 
 puts new_employee.password
+
+puts new_employee.inspect
